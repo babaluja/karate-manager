@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: karate-manager
+    env: python
+    buildCommand: echo "Dipendenze già installate in Replit"
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --reuse-port main:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: karate-manager-db
+          property: connectionString
+
+databases:
+  - name: karate-manager-db
+    plan: free
+    databaseName: karate_manager
+    user: karate_user

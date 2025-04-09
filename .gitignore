@@ -1,0 +1,32 @@
+# File di ambiente
+.env
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# File di database locali
+*.db
+*.sqlite
+
+# File di log
+*.log
+
+# File temporanei
+*.tmp
+.DS_Store
+
+# Cartella di distribuzione
+dist/
+build/
+
+# File specifici di Replit
+.replit
+replit.nix
+.upm/
+.config/
+.cache/
+
+# Directory specifiche per IDEs
+.idea/
+.vscode/
